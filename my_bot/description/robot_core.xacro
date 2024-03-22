@@ -1,0 +1,239 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
+<xacro:include filename="inertial_macros.xacro" />
+    <material name="white">
+        <color rgba="1 1 1 1" />
+    </material>
+
+    <material name="orange">
+        <color rgba="1 0.3 0.1 1"/>
+    </material>
+
+    <material name="blue">
+        <color rgba="0.2 0.2 1 1"/>
+    </material>
+
+    <material name="black">
+        <color rgba="0 0 0 1"/>
+    </material>
+
+    <material name="red">
+        <color rgba="1 0 0 1"/>
+    </material>
+
+
+    
+    <link name="chassis">
+    <inertial>
+      <origin
+        xyz="0.0030946 4.78250032638821E-11 0.053305"
+        rpy="0 0 0" />
+      <mass
+        value="47.873" />
+      <inertia
+        ixx="0.774276574699151"
+        ixy="-1.03781944357671E-10"
+        ixz="0.00763014265820928"
+        iyy="1.64933255189991"
+        iyz="1.09578155845563E-12"
+        izz="2.1239326987473" />
+    </inertial>
+    <visual>
+        <origin xyz="0 0 0" rpy="${pi/2} 0 ${pi}"/>
+        <geometry>
+            <mesh filename="file://$(find my_bot)/meshes/robot_base.stl" />
+        </geometry>
+        <material name="white"/>
+    </visual>
+    <collision>
+        <origin xyz="0 0 0" rpy="${pi/2} 0 ${pi}"/>
+        <geometry>
+            <mesh filename="file://$(find my_bot)/meshes/robot_base.stl" />
+        </geometry>
+    </collision>
+    </link>
+    <gazebo reference="chassis">
+    <material>Gazebo/White</material>
+    </gazebo>
+    
+
+    <!-- FRONT LEFT WHEEL -->
+
+    
+    <link name="front_left_wheel">
+    <inertial>
+      <origin
+        xyz="-4.1867E-18 0.0068085 -1.65658661799998E-18"
+        rpy="0 0 0" />
+      <mass
+        value="2.6578" />
+      <inertia
+        ixx="0.00856502765719703"
+        ixy="1.5074118157338E-19"
+        ixz="-4.78150098725052E-19"
+        iyy="0.013670640432096"
+        iyz="-2.68136447099727E-19"
+        izz="0.00856502765719703" />
+    </inertial>
+    <visual>
+        <geometry>
+            <mesh filename="file://$(find my_bot)/meshes/wheel.stl" />
+        </geometry>
+        <material name="blue"/>
+    </visual>
+    <collision>
+        <geometry>
+            <mesh filename="file://$(find my_bot)/meshes/wheel.stl" />
+        </geometry>
+    </collision>
+    </link>
+    
+    <gazebo reference="front_left_wheel_joint">
+        <material>Gazebo/White</material>
+    </gazebo>
+    <!-- FRONT RIGHT WHEEL -->
+
+    <link name="front_right_wheel">
+    <inertial>
+      <origin
+        xyz="-4.1867E-18 0.0068085 -1.65658661799998E-18"
+        rpy="0 0 0" />
+      <mass
+        value="2.6578" />
+      <inertia
+        ixx="0.00856502765719703"
+        ixy="1.5074118157338E-19"
+        ixz="-4.78150098725052E-19"
+        iyy="0.013670640432096"
+        iyz="-2.68136447099727E-19"
+        izz="0.00856502765719703" />
+    </inertial>
+    <visual>
+        <geometry>
+            <mesh filename="file://$(find my_bot)/meshes/wheel.stl" />
+        </geometry>
+        <material name="blue"/>
+    </visual>
+    <collision>
+
+        <geometry>
+            <mesh filename="file://$(find my_bot)/meshes/wheel.stl" />
+        </geometry>
+    </collision>
+    </link>
+    <gazebo reference="front_right_wheel">
+    <material>Gazebo/White</material>
+    </gazebo>
+    
+       <!-- REAR LEFT WHEEL -->
+
+    
+    <link name="rear_left_wheel">
+    <inertial>
+      <origin
+        xyz="-4.1867E-18 0.0068085 -1.65658661799998E-18"
+        rpy="0 0 0" />
+      <mass
+        value="2.6578" />
+      <inertia
+        ixx="0.00856502765719703"
+        ixy="1.5074118157338E-19"
+        ixz="-4.78150098725052E-19"
+        iyy="0.013670640432096"
+        iyz="-2.68136447099727E-19"
+        izz="0.00856502765719703" />
+    </inertial>
+    <visual>
+        <geometry>
+            <mesh filename="file://$(find my_bot)/meshes/wheel.stl" />
+        </geometry>
+        <material name="blue"/>
+    </visual>
+    <collision>
+        <geometry>
+            <mesh filename="file://$(find my_bot)/meshes/wheel.stl" />
+        </geometry>
+    </collision>
+    </link>
+    
+    <gazebo reference="rear_left_wheel">
+        <material>Gazebo/White</material>
+    </gazebo>
+    <!-- REAR RIGHT WHEEL -->
+
+    <link name="rear_right_wheel">
+    <inertial>
+      <origin
+        xyz="-4.1867E-18 0.0068085 -1.65658661799998E-18"
+        rpy="0 0 0" />
+      <mass
+        value="2.6578" />
+      <inertia
+        ixx="0.00856502765719703"
+        ixy="1.5074118157338E-19"
+        ixz="-4.78150098725052E-19"
+        iyy="0.013670640432096"
+        iyz="-2.68136447099727E-19"
+        izz="0.00856502765719703" />
+    </inertial>
+    <visual>
+        <geometry>
+            <mesh filename="file://$(find my_bot)/meshes/wheel.stl" />
+        </geometry>
+        <material name="blue"/>
+    </visual>
+    <collision>
+        <geometry>
+            <mesh filename="file://$(find my_bot)/meshes/wheel.stl" />
+        </geometry>
+    </collision>
+    </link>
+    <gazebo reference="rear_right_wheel">
+    <material>Gazebo/White</material>
+    </gazebo>
+    
+    <!-- BASE LINK -->
+
+    <link name="base_link">
+
+    </link>
+    
+    
+    <joint name="chassis_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="chassis"/>
+    <origin xyz="0 0 0"/>
+    </joint>
+
+    <joint name="front_right_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="front_right_wheel"/>
+    <origin xyz="0.220 -0.250 0" rpy="${pi/2} 0 0"/>
+    <axis xyz="0 0 -1"/>
+    </joint>
+
+
+    <joint name="front_left_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="front_left_wheel"/>
+    <origin xyz="0.220 0.250 0" rpy="-${pi/2} 0 0"/>
+    <axis xyz="0 0 1"/>
+    </joint>
+
+    <joint name="rear_right_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="rear_right_wheel"/>
+    <origin xyz="-0.220 -0.250 0" rpy="${pi/2} 0 0"/>
+    <axis xyz="0 0 -1"/>
+    </joint>
+
+
+    <joint name="rear_left_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="rear_left_wheel"/>
+    <origin xyz="-0.220 0.250 0" rpy="-${pi/2} 0 0"/>
+    <axis xyz="0 0 1"/>
+    </joint>
+
+
+</robot>
