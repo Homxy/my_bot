@@ -1,5 +1,5 @@
 # my_bot
-1. install by follow these command <br>
-    sudo apt install ros-humble-gazebo-*
-    sudo apt install ros-humble-controller-*
-    sudo apt install ros-humble-controller-manager-*
+1. install by follow these command 
+    <br>sudo apt install ros-humble-gazebo-*
+    <br>sudo apt install ros-humble-controller-*
+    <br>sudo apt install ros-humble-controller-manager-*
